@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  background-image: url("quiz2.jpg");
+  background-image: url("backgroundimage.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

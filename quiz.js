@@ -85,7 +85,7 @@ let questions = [
 const startbutton = document.querySelector(".btn-start");
 startbutton.addEventListener("click", (e) => {
   e.preventDefault();
-  document.querySelector(".main-title").style.display = "none";
+  document.body.style.backgroundImage = "none";
   changeQuestion(questions[0], 0);
 });
 const changeQuestion = (q, index) => {
