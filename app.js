@@ -5,12 +5,6 @@ let attendedquestionscount = 1;
 let score = 0;
 let questions = [
   {
-    question: "Which country does this flag belong to?",
-    image: "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg",
-    options: ["Argentina", "India", "Bhutan", "Lebanon"],
-    answer: "Argentina",
-  },
-  {
     question: "Who is the founder Of Microsoft?",
     image: "https://wallpaperaccess.com/full/833268.png",
     options: ["Alan Turing", "Sabeer Bhatia", "Jeff Bezoz", "Bill Gates"],
@@ -80,6 +74,12 @@ let questions = [
       "Nandan Nilekani",
     ],
     answer: "Vijay Bhatkar",
+  },
+  {
+    question: "Which country does this flag belong to?",
+    image: "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg",
+    options: ["Argentina", "India", "Bhutan", "Lebanon"],
+    answer: "Argentina",
   },
 ];
 const startbutton = document.querySelector(".btn-start");
