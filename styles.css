@@ -109,6 +109,7 @@ body {
   color: grey;
 }
 .option {
+  padding: 0px;
   color: grey;
   width: 320px;
   border: 1px solid grey;
@@ -119,6 +120,7 @@ body {
   height: 40px;
   position: relative;
 }
+
 .option label,
 .option input {
   display: block;
@@ -136,12 +138,10 @@ body {
   height: 110px;
   width: 200px;
 }
-.option input {
-  width: 50vw;
-}
+
 .option input[type="radio"] {
   opacity: 0.011;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .question-image {
@@ -153,10 +153,12 @@ body {
   background: teal;
   border-radius: 4px;
 }
+
 .option label {
   margin: 0 auto;
   cursor: pointer;
-  z-index: 90;
+  z-index: 1;
+
   line-height: 1.8em;
 }
 

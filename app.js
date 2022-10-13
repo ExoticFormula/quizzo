@@ -122,13 +122,19 @@ const changeQuestion = (q, index) => {
     let input = document.createElement("input");
     input.type = "radio";
     input.id = "option" + (index + 1);
-    input.name = "check-substitution-2";
+    input.name = "checkname";
     let label = document.createElement("label");
     label.innerText = optiontext;
     option.appendChild(input);
     option.appendChild(label);
     option.addEventListener("click", () => {
       checkedoption = option;
+      document.querySelectorAll(".option").forEach((optionitem) => {
+        console.log(optionitem == option && !optionitem.firstChild.checked);
+        if (optionitem == option && !optionitem.firstChild.checked) {
+          optionitem.firstChild.checked = true;
+        }
+      });
     });
     if (optiontext === currentquestion.answer) correctansweroption = option;
     optionsform.appendChild(option);
@@ -167,8 +173,7 @@ const changeQuestion = (q, index) => {
         }
       }
 
-      //change back to 10
-      if (attendedquestionscount == 3) {
+      if (attendedquestionscount == 10) {
         displayScore(playername, score);
       }
     }
@@ -180,18 +185,18 @@ const changeQuestion = (q, index) => {
   document.body.appendChild(questioncontainer);
 };
 const displayScore = (playername, score) => {
-  emailjs
-    .send("service_2exblmo", "template_8pkay8x", {
-      message: `Name: ${playername}, Score: ${score}`,
-    })
-    .then(
-      (response) => {
-        return;
-      },
-      (error) => {
-        return;
-      }
-    );
+  // emailjs
+  //   .send("service_2exblmo", "template_8pkay8x", {
+  //     message: `Name: ${playername}, Score: ${score}`,
+  //   })
+  //   .then(
+  //     (response) => {
+  //       return;
+  //     },
+  //     (error) => {
+  //       return;
+  //     }
+  //   );
   const questioncontainer = document.querySelector(".question-container");
   if (questioncontainer) questioncontainer.remove();
   const resultscontainer = document.createElement("div");
@@ -219,43 +224,3 @@ const displayScore = (playername, score) => {
   resultscontainer.appendChild(finishbtn);
   document.body.appendChild(resultscontainer);
 };
-
-// function sendMail(playername, score) {
-//   const myHeaders = new Headers();
-//   myHeaders.append("Content-Type", "application/json");
-//   myHeaders.set(
-//     "Authorization",
-//     "Basic " +
-//       btoa(
-//         unescape(
-//           encodeURIComponent(
-//             "aefe5566a97137f14a724329b3d0359d" +
-//               ":" +
-//               "c937b4c0ca4cef7596377b8e95b0ae9d"
-//           )
-//         )
-//       )
-//   );
-
-//   const data = JSON.stringify({
-//     Messages: [
-//       {
-//         From: { Email: "apollocoder2004@gmail.com", Name: "Kishor" },
-//         To: [{ Email: "exoticformulayt@gmail.com", Name: "quizzo" }],
-//         Subject: "Quizzo score",
-//         TextPart: `Name: ${playername}, Score: ${score}`,
-//       },
-//     ],
-//   });
-
-//   const requestOptions = {
-//     method: "POST",
-//     headers: myHeaders,
-//     body: data,
-//   };
-
-//   fetch("https://api.mailjet.com/v3.1/send", requestOptions)
-//     .then((response) => response.text())
-//     .then((result) => console.log(result))
-//     .catch((error) => console.log("error", error));
-// }
