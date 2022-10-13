@@ -185,18 +185,18 @@ const changeQuestion = (q, index) => {
   document.body.appendChild(questioncontainer);
 };
 const displayScore = (playername, score) => {
-  // emailjs
-  //   .send("service_2exblmo", "template_8pkay8x", {
-  //     message: `Name: ${playername}, Score: ${score}`,
-  //   })
-  //   .then(
-  //     (response) => {
-  //       return;
-  //     },
-  //     (error) => {
-  //       return;
-  //     }
-  //   );
+  emailjs
+    .send("service_2exblmo", "template_8pkay8x", {
+      message: `Name: ${playername}, Score: ${score}`,
+    })
+    .then(
+      (response) => {
+        return;
+      },
+      (error) => {
+        return;
+      }
+    );
   const questioncontainer = document.querySelector(".question-container");
   if (questioncontainer) questioncontainer.remove();
   const resultscontainer = document.createElement("div");
