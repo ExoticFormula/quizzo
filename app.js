@@ -1,6 +1,7 @@
 let playername = "";
 let inputname = document.querySelector(".input-name");
 const mainwrapper = document.querySelector(".main-wrapper");
+emailjs.init("2LstEhvjCNJSwk2H-");
 let attendedquestionscount = 1;
 let score = 0;
 let questions = [
@@ -167,7 +168,7 @@ const changeQuestion = (q, index) => {
       }
 
       //change back to 10
-      if (attendedquestionscount == 10) {
+      if (attendedquestionscount == 3) {
         displayScore(playername, score);
       }
     }
@@ -179,7 +180,18 @@ const changeQuestion = (q, index) => {
   document.body.appendChild(questioncontainer);
 };
 const displayScore = (playername, score) => {
-  console.log(playername);
+  emailjs
+    .send("service_2exblmo", "template_8pkay8x", {
+      message: `Name: ${playername}, Score: ${score}`,
+    })
+    .then(
+      (response) => {
+        return;
+      },
+      (error) => {
+        return;
+      }
+    );
   const questioncontainer = document.querySelector(".question-container");
   if (questioncontainer) questioncontainer.remove();
   const resultscontainer = document.createElement("div");
@@ -207,3 +219,43 @@ const displayScore = (playername, score) => {
   resultscontainer.appendChild(finishbtn);
   document.body.appendChild(resultscontainer);
 };
+
+// function sendMail(playername, score) {
+//   const myHeaders = new Headers();
+//   myHeaders.append("Content-Type", "application/json");
+//   myHeaders.set(
+//     "Authorization",
+//     "Basic " +
+//       btoa(
+//         unescape(
+//           encodeURIComponent(
+//             "aefe5566a97137f14a724329b3d0359d" +
+//               ":" +
+//               "c937b4c0ca4cef7596377b8e95b0ae9d"
+//           )
+//         )
+//       )
+//   );
+
+//   const data = JSON.stringify({
+//     Messages: [
+//       {
+//         From: { Email: "apollocoder2004@gmail.com", Name: "Kishor" },
+//         To: [{ Email: "exoticformulayt@gmail.com", Name: "quizzo" }],
+//         Subject: "Quizzo score",
+//         TextPart: `Name: ${playername}, Score: ${score}`,
+//       },
+//     ],
+//   });
+
+//   const requestOptions = {
+//     method: "POST",
+//     headers: myHeaders,
+//     body: data,
+//   };
+
+//   fetch("https://api.mailjet.com/v3.1/send", requestOptions)
+//     .then((response) => response.text())
+//     .then((result) => console.log(result))
+//     .catch((error) => console.log("error", error));
+// }
