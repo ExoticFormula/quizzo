@@ -3,10 +3,7 @@
 }
 
 body {
-  background-image: url("bgimg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("bgimg.jpg") no-repeat center center fixed;
   margin: 0;
   padding: 0;
   background-color: dodgerblue;
@@ -18,6 +15,8 @@ body {
   color: white;
   flex-direction: column;
 }
+
+
 .main-wrapper {
   gap: 18px;
   background-color: white;
