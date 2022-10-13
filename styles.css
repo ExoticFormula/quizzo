@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url("backgroundimg.jpg");
+  background-image: url("bgimg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -84,7 +84,7 @@ body {
   width: 320px;
 }
 
-.question-container {
+.container {
   border-radius: 5px;
 
   height: 100vh;
@@ -157,4 +157,20 @@ body {
   cursor: pointer;
   z-index: 90;
   line-height: 1.8em;
+}
+
+.results-container {
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 240px;
+}
+
+.results-container span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.btn-finish {
+  width: 90%;
 }

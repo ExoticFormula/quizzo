@@ -85,6 +85,7 @@ let questions = [
 const startbutton = document.querySelector(".btn-start");
 startbutton.addEventListener("click", (e) => {
   e.preventDefault();
+  playername = inputname.value;
   document.body.style.backgroundImage = "none";
   changeQuestion(questions[0], 0);
 });
@@ -98,7 +99,7 @@ const changeQuestion = (q, index) => {
   let correctansweroption;
   let questionattended = false;
   let questioncontainer = document.createElement("div");
-  questioncontainer.classList.add("question-container");
+  questioncontainer.classList.add("container", "question-container");
   mainwrapper.style.display = "none";
   let question = document.createElement("p");
   question.innerText = currentquestion.question;
@@ -134,7 +135,7 @@ const changeQuestion = (q, index) => {
   let btnanswer = document.createElement("button");
   btnanswer.classList.add("btn");
   btnanswer.classList.add("btn-answer");
-  btnanswer.innerText = "SUBMIT";
+  btnanswer.innerText = questionindex == 9 ? "FINISH" : "SUBMIT";
   btnanswer.addEventListener("click", (e) => {
     e.preventDefault();
     if (btnanswer.innerText === "NEXT") {
@@ -150,24 +151,24 @@ const changeQuestion = (q, index) => {
         document.querySelectorAll(".option input").forEach((optioninput) => {
           optioninput.disabled = true;
         });
+        btnanswer.innerText = questionindex == 9 ? "FINISH" : "NEXT";
         if (checkedoption.innerText === currentquestion.answer) {
           score++;
           checkedoption.style.color = "white";
           checkedoption.firstChild.checked = false;
           checkedoption.style.backgroundColor = "green";
-          btnanswer.innerText = "NEXT";
         } else {
           checkedoption.style.backgroundColor = "red";
           checkedoption.firstChild.checked = false;
           checkedoption.style.color = "white";
           correctansweroption.style.color = "white";
           correctansweroption.style.backgroundColor = "green";
-          btnanswer.innerText = "NEXT";
         }
       }
+
+      //change back to 10
       if (attendedquestionscount == 10) {
-        //improve this score page
-        // document.write(`Awesome ${playername}, You scored ${score} out of 10!`);
+        displayScore(playername, score);
       }
     }
     questionattended = true;
@@ -176,4 +177,33 @@ const changeQuestion = (q, index) => {
   optionscontainer.appendChild(optionsform);
   questioncontainer.appendChild(optionscontainer);
   document.body.appendChild(questioncontainer);
+};
+const displayScore = (playername, score) => {
+  console.log(playername);
+  const questioncontainer = document.querySelector(".question-container");
+  if (questioncontainer) questioncontainer.remove();
+  const resultscontainer = document.createElement("div");
+  resultscontainer.classList.add("container", "results-container");
+  console.log(resultscontainer);
+  const congratstext = document.createElement("h2");
+  if (score >= 7) congratstext.innerText = `Congratulations ${playername} !!`;
+  else if (score >= 5) congratstext.innerText = `That's good, ${playername} !!`;
+  else if (score >= 3) congratstext.innerText = `Not too bad, ${playername}`;
+  else congratstext.innerText = `Better luck next time :(, ${playername} `;
+
+  resultscontainer.appendChild(congratstext);
+  const scoretext = document.createElement("span");
+  scoretext.innerText = "Your score is";
+  const scorevalue = document.createElement("span");
+  scorevalue.innerText = `${score}/10`;
+  resultscontainer.appendChild(scoretext);
+  resultscontainer.appendChild(scorevalue);
+  const finishbtn = document.createElement("button");
+  finishbtn.innerText = "FINISH";
+  finishbtn.classList.add("btn", "btn-finish");
+  finishbtn.addEventListener("click", () => {
+    window.location.reload();
+  });
+  resultscontainer.appendChild(finishbtn);
+  document.body.appendChild(resultscontainer);
 };
