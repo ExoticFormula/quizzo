@@ -118,7 +118,7 @@ const changeQuestion = (q, index) => {
   let progressbar = document.createElement("p");
   progressbar.innerText = attendedquestionscount + "/10";
   questioncontainer.appendChild(progressbar);
-  let timermax = 8;
+  let timermax = 15;
 
   let timer = document.createElement("span");
   timer.innerText = `Time Left: ${timermax}`;
