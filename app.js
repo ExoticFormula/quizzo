@@ -6,87 +6,87 @@ let attendedquestionscount = 1;
 let score = 0;
 let questions = [
   {
-    question: "Who created Java programming language?",
+    question: "Which country has most frog?",
     image:
-      "https://images.idgesg.net/images/article/2019/05/java_binary_code_gears_programming_coding_development_by_bluebay2014_gettyimages-1040871468_2400x1600-100795798-large.jpg?auto=webp&quality=85,70",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f7/World_Map_%28political%29.svg",
     options: [
-      "James Gosling",
-      "Richard Stallman",
-      "Guido Van Rossum",
-      "Bjarne Stroustrup",
+      "brazil",
+      "salethur",
+      "china",
+      "japan",
     ],
-    answer: "James Gosling",
+    answer: "salethur",
   },
   {
     question:
-      "Which protocol is used to identify the hardware address of a local device?",
-    image: "https://devqa.io/assets/images/networking-protocol-basics.png",
+      "how many lies kappe told so far?",
+    image: "https://i1.wp.com/crunchynihongo.com/images/easy-japanese-faq/vocab-10256-counting.jpg?w=810",
     options: [
-      "Address Resolution Protocol",
-      "Media Access Protocol",
-      "Simple Address Transfer Protocol",
-      "Tranmission Control Protocol",
+      "1",
+      "Never in his life",
+      "All his life",
+      "Infinity",
     ],
-    answer: "Address Resolution Protocol",
+    answer: "Infinity",
   },
   {
-    question: "Twitter is an example of what service?",
-    image: "https://www.punekarnews.in/wp-content/uploads/2021/03/Twitter.jpg",
-    options: ["Blog", "Micro Blog", "Forum", "Gallery"],
-    answer: "Micro Blog",
+    question: "which is the oldest loops?",
+    image: "https://www.loopreturns.com/wp-content/uploads/2022/05/loop_logo_whitebg.png",
+    options: ["Frog", "For", "While", "Do-while"],
+    answer: "Frog",
   },
   {
-    question: "Who is the father of World Wide Web(WWW)?",
+    question: "Who is the father of frequency?",
     image:
-      "https://cdn.britannica.com/73/78373-050-2D15D41C/Tim-Berners-Lee.jpg",
+      "https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A0a6eb6ba678b209ac1c05e4f124bf965b59024c1ee34d7373af48a46%2BIMAGE_THUMB_POSTCARD_TINY%2BIMAGE_THUMB_POSTCARD_TINY.1",
     options: [
-      "Dennis Ritchie",
-      "John Mccarthy",
-      "Michael Dell",
-      "Tim Berners Lee",
+      "Kappe shastry",
+      "Lotte shastry",
+      "Rails shastry",
+      "All the above",
     ],
-    answer: "Tim Berners Lee",
+    answer: "All the above",
   },
   {
-    question: " When was the term Social Networking first used?",
+    question: " What does kappe wanna become?",
     image:
-      "https://clockwise.software/img/blog/how-to-build-a-social-network-website/header-background.png",
-    options: ["1960", "1954", "1980", "2000"],
-    answer: "1954",
+      "https://assets.website-files.com/5ef5c908f55bc9b2c48a5cc2/6107e9940ff5a313403c82fc_goal-setting-1955806_1920.png",
+    options: ["Hacker", "Drone expert", "Tech support", "Script writer", "],
+    answer: "Hacker",
   },
   {
-    question: "Which is known as the programming language of Web?",
+    question: "wlhich language does kappe know?",
     image:
-      "https://www.simplilearn.com/ice9/free_resources_article_thumb/Best-Programming-Languages-to-Start-Learning-Today.jpg",
-    options: ["Java", "PHP", "Javascript", "Python"],
-    answer: "Javascript",
+      "https://gowithcode.com/wp-content/uploads/2021/04/top-programming-languages.jpg",
+    options: ["Java", "C#", "Javascript", "Python"],
+    answer: "C#",
   },
   {
-    question: "What do you call a single point on a computer screen?",
-    image: "https://i.ytimg.com/vi/AjFXlj0WmRs/maxresdefault.jpg",
-    options: ["Pixel", "Density", "Vertex", "Resolution"],
-    answer: "Pixel",
+    question: "Name the vehicle of kappe?",
+    image: "https://www.indiafilings.com/learn/wp-content/uploads/2018/11/Karnataka-Vehicle-Tax.jpg",
+    options: ["Pluser", "Duke", "KTM", "Poop Engine"],
+    answer: "Poop Engine",
   },
   {
     question:
-      "What is part of a database that holds only one type of information?",
+      "Hobby of kappe?",
     image:
-      "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/777046/0712-Bad_Practices_in_Database_Design_-_Are_You_Making_These_Mistakes_Dan_Social-754bc73011e057dc76e55a44a954e0c3.png",
-    options: ["Report", "Record", "Field", "File"],
+      "https://image.shutterstock.com/image-vector/hobbies-entertainment-concept-large-inscription-260nw-2136659695.jpg",
+    options: ["Telling lie", "Frequency setting", "Hacking", "All the above"],
     answer: "Field",
   },
   {
-    question: "A folder in windows cannot be made with the name",
-    image: "https://www.wintips.org/wp-content/uploads/2017/12/image-15.png",
-    options: ["can", "con", "tmp", "mak"],
-    answer: "con",
+    question: "Kappe's best friend",
+    image: "https://thumbs.dreamstime.com/b/best-friends-friendship-day-hand-lettering-phrase-best-friends-friendship-day-hand-lettering-phrase-girls-friend-greeting-card-251030991.jpg",
+    options: ["Shiva", "Kishor", "Another kappe", "Vignesh"],
+    answer: "Kishor",
   },
   {
-    question: "What is SATA?",
+    question: "Origin of kappe  ?",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6eHDirt42Dr80zExM3EF6boFfXNA9dbV2lg&usqp=CAU",
-    options: ["Storage Device", "Virus", "Anti-Virus", "Hard Drive Interface"],
-    answer: "Hard Drive Interface",
+      "https://www.diskpart.com/screenshot/en/others/others/origin.png",
+    options: ["Salethur", "Puttur", "Kabaka", "Unknown"],
+    answer: "Unknown",
   },
 ];
 const startbutton = document.querySelector(".btn-start");
@@ -119,18 +119,14 @@ const changeQuestion = (q, index) => {
   progressbar.innerText = attendedquestionscount + "/10";
   questioncontainer.appendChild(progressbar);
   let timermax = 15;
-
   let timer = document.createElement("span");
   timer.innerText = `Time Left: ${timermax}`;
   questioncontainer.appendChild(timer);
-
   let timerinterval = setInterval(() => {
     timermax--;
     timer.innerText = `Time Left: ${timermax}`;
-
     if (timermax == 0) {
       attendedquestionscount++;
-
       if (questionindex == 9) {
         displayScore(playername, score);
       } else {
@@ -138,7 +134,6 @@ const changeQuestion = (q, index) => {
       }
     }
   }, 1000);
-
   let optionscontainer = document.createElement("div");
   optionscontainer.classList.add("options-container");
   let optionsform = document.createElement("form");
@@ -199,7 +194,6 @@ const changeQuestion = (q, index) => {
           correctansweroption.style.backgroundColor = "green";
         }
       }
-
       if (questionindex == 9) {
         displayScore(playername, score);
       }
@@ -215,7 +209,6 @@ const displayScore = (playername, score) => {
   emailjs.send("service_2exblmo", "template_8pkay8x", {
     message: `Name: ${playername}, Score: ${score}`,
   });
-
   const questioncontainer = document.querySelector(".question-container");
   if (questioncontainer) questioncontainer.remove();
   const resultscontainer = document.createElement("div");
@@ -226,7 +219,6 @@ const displayScore = (playername, score) => {
   else if (score >= 5) congratstext.innerText = `That's good, ${playername} !!`;
   else if (score >= 3) congratstext.innerText = `Not too bad, ${playername}`;
   else congratstext.innerText = `Better luck next time :(, ${playername} `;
-
   resultscontainer.appendChild(congratstext);
   const scoretext = document.createElement("span");
   scoretext.innerText = "Your score is";
