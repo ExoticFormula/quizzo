@@ -51,7 +51,7 @@ let questions = [
     question: " What does kappe wanna become?",
     image:
       "https://assets.website-files.com/5ef5c908f55bc9b2c48a5cc2/6107e9940ff5a313403c82fc_goal-setting-1955806_1920.png",
-    options: ["Hacker", "Drone expert", "Tech support", "Script writer", "],
+    options: ["Hacker", "Drone expert", "Tech support", "Script writer"],
     answer: "Hacker",
   },
   {
